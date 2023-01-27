@@ -4,13 +4,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:shaberunkun/page/first_page.dart';
 
-//final FirebaseAuth auth = FirebaseAuth.instance;
-//final FirebaseFirestore fireStoreInstance = FirebaseFirestore.instance;
-//final CollectionReference users = fireStoreInstance.collection("users");
+final FirebaseAuth auth = FirebaseAuth.instance;
+final FirebaseFirestore fireStoreInstance = FirebaseFirestore.instance;
+final CollectionReference users = fireStoreInstance.collection("users");
 
 void main() async{
-  //WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

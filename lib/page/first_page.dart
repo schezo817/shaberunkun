@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../function/screen_size.dart';
 
 import '../function/func.dart';
-import 'chat.dart';
+import 'login.dart';
+import 'register.dart';
 
 class FirstPage extends StatefulWidget {
   @override
@@ -30,12 +30,12 @@ class _FirstPageState extends State<FirstPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Func.haveTextButton(context, Chat(), 44.7, 325, "Login",
+                  Func.haveTextButton(context, Login(), 44.7, 325, "Login",
                       Colors.blue, Colors.white),
                   Container(
                     height: 33.5,
                   ),
-                  Func.haveTextButton(context, Chat(), 44.7, 325, "Sign Up",
+                  Func.haveTextButton(context, Register(), 44.7, 325, "Sign Up",
                       Colors.blue, Colors.white),
                 ],
               ),

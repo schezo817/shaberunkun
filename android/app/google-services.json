@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1094513387479",
+    "project_id": "shaberunkun",
+    "storage_bucket": "shaberunkun.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094513387479:android:cba8bba03b6fc397590d92",
+        "android_client_info": {
+          "package_name": "com.github.schezo817.shaberunkun.shaberunkun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094513387479-8en3vi6cjr0t7g4474s4o3cmutqhgs38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCfYdvkkhTQ1gbunuUmCTWiwkUID4_42k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094513387479-8en3vi6cjr0t7g4474s4o3cmutqhgs38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
