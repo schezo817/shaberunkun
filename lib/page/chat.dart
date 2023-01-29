@@ -19,7 +19,6 @@ class _ChatState extends State<Chat> {
 
   int itemCount = 2;
 
-
   @override
   void dispose() {
     messageController.dispose();
@@ -47,20 +46,19 @@ class _ChatState extends State<Chat> {
                 child: Text('Menu'),
               ),
               ListTile(
-                title: const Text("Change Name"),
-                trailing: const Icon(Icons.arrow_forward),
-                onTap: ()async{
-                  String? userName = await showDialog<String>(
-                    context: context,
-                    builder: (context) {
-                      return const ChangeNameDialog(text: 'Human');
-                    },
-                  );
-                  setState(() {
-                    _userName = userName!;
-                  });
-                }
-              ),
+                  title: const Text("Change Name"),
+                  trailing: const Icon(Icons.arrow_forward),
+                  onTap: () async {
+                    String? userName = await showDialog<String>(
+                      context: context,
+                      builder: (context) {
+                        return const ChangeNameDialog(text: 'Human');
+                      },
+                    );
+                    setState(() {
+                      _userName = userName!;
+                    });
+                  }),
             ],
           ),
         ),
@@ -71,19 +69,17 @@ class _ChatState extends State<Chat> {
               width: double.infinity,
               color: Colors.lightGreen,
             ),
-            Container(
-            child: SingleChildScrollView(
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: _chatList.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(_chatList[index]),
-                    );
-                  },
-                ),
-            ),
+            SingleChildScrollView(
+              child: ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: _chatList.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(_chatList[index]),
+                  );
+                },
+              ),
             ),
             Container(
               alignment: Alignment.center,
@@ -104,7 +100,7 @@ class _ChatState extends State<Chat> {
                       ),
                       IconButton(
                         icon: const Icon(Icons.schedule_send_rounded),
-                        onPressed: () async{
+                        onPressed: () async {
                           _message = messageController.text;
                           var text = await Chatgpt.getResponse(_message);
                           setState(() {
