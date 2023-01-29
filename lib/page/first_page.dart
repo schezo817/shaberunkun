@@ -23,20 +23,31 @@ class _FirstPageState extends State<FirstPage> {
             Container(
               height: double.infinity,
               width: double.infinity,
-              color: Colors.green,
+              color: Colors.lightGreen,
             ),
             Container(
-              padding: const EdgeInsets.all(45),
+              alignment: Alignment.center,
+              child: Text(
+                "喋るんくん",
+                style: TextStyle(
+                  fontSize: 60,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.only(bottom: 45, right: 8, left: 8),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Func.haveTextButton(context, Login(), 44.7, 325, "Login",
-                      Colors.blue, Colors.white),
+                      Colors.green, Colors.white),
                   Container(
                     height: 33.5,
                   ),
                   Func.haveTextButton(context, Register(), 44.7, 325, "Sign Up",
-                      Colors.blue, Colors.white),
+                      Colors.green, Colors.white),
                 ],
               ),
             ),

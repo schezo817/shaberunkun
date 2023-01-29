@@ -73,7 +73,7 @@ class _LoginState extends State<Login> {
                 ),
                 ElevatedButton(
                   child: Text(
-                    'ログイン',
+                    'Login',
                   ),
                   onPressed: () async {
                     //フォームの入力内容を代入
