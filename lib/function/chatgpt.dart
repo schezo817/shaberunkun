@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Chatgpt {
-  static Future<Response> getResponse(String message) async {
-    final apiKey = dotenv.get("CHATGPT_APYKEY");
+  static Future<String> getResponse(String message) async {
+    final apiKey = dotenv.get("CHATGPT_APIKEY");
     final response = await Dio().post(
       "https://api.openai.com/v1/completions",
       data: {
@@ -20,6 +20,8 @@ class Chatgpt {
         headers: {"Authorization": "Bearer ${apiKey}"},
       ),
     );
-    return response;
+    String text = "";
+    text = response.data["choices"][0]["text"];
+    return text;
   }
 }
