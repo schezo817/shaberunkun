@@ -27,7 +27,7 @@ class _FirstPageState extends State<FirstPage> {
             ),
             Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 "喋るんくん",
                 style: TextStyle(
                   fontSize: 60,
